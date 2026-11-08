@@ -156,6 +156,7 @@ namespace RollABallCoinCollector.EditorTools
             gameManager.Configure(hud, gameAudio);
 
             VisualUpgradeTool.ApplyToScene(scene);
+            MainMenuLayoutFix.ApplyToScene(scene);
 
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene, ScenePath);
@@ -498,26 +499,29 @@ namespace RollABallCoinCollector.EditorTools
 
             GameObject menuPanel = CreateImagePanel("Main Menu Panel", canvasObject.transform,
                 Vector2.zero, Vector2.one, new Vector2(0.5f, 0.5f), Vector2.zero, Vector2.zero,
-                new Color(0.012f, 0.045f, 0.08f, 0.78f), false);
+                new Color(0.012f, 0.035f, 0.075f, 0.48f), false);
             GameObject menuCard = CreateImagePanel("Main Menu Card", menuPanel.transform,
-                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(690f, 540f), Vector2.zero,
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(760f, 620f), Vector2.zero,
                 new Color32(20, 55, 75, 250), true);
-            CreateText("Main Menu Eyebrow", menuCard.transform, font, "A SUNNY LITTLE OBSTACLE COURSE", 21f,
+            CreateText("Main Menu Eyebrow", menuCard.transform, font, "A SUNNY LITTLE OBSTACLE COURSE", 18f,
                 new Color32(121, 226, 193, 255), TextAlignmentOptions.Center,
-                new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(600f, 40f), new Vector2(0f, -70f));
-            CreateText("Main Menu Title", menuCard.transform, font, "ROLL-A-BALL", 66f,
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(648f, 30f), Vector2.zero);
+            CreateText("Main Menu Title", menuCard.transform, font, "ROLL-A-BALL", 72f,
                 Color.white, TextAlignmentOptions.Center,
-                new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(610f, 90f), new Vector2(0f, -150f));
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(648f, 94f), Vector2.zero);
             CreateText("Main Menu Subtitle", menuCard.transform, font, "COIN COLLECTOR", 34f,
                 new Color32(255, 206, 82, 255), TextAlignmentOptions.Center,
-                new Vector2(0.5f, 1f), new Vector2(0.5f, 1f), new Vector2(610f, 54f), new Vector2(0f, -230f));
-            CreateText("Main Menu Instructions", menuCard.transform,
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(648f, 54f), Vector2.zero);
+            CreateText("Main Menu Description", menuCard.transform,
                 font,
-                "Roll through the gates, dodge the moving red sweepers,\nand collect all 12 golden coins.\n\nMove with WASD or the arrow keys.",
-                25f, new Color32(231, 242, 244, 255), TextAlignmentOptions.Center,
-                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(600f, 160f), new Vector2(0f, -18f));
+                "Roll through the gates, dodge the moving obstacles, and collect all 12 golden coins.",
+                24f, new Color32(235, 243, 249, 255), TextAlignmentOptions.Center,
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(648f, 106f), Vector2.zero);
+            CreateText("Main Menu Controls", menuCard.transform, font, "Move with WASD or the Arrow Keys.", 19f,
+                new Color32(170, 230, 219, 255), TextAlignmentOptions.Center,
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(648f, 30f), Vector2.zero);
             UnityEngine.UI.Button playButton = CreateButton("Play Button", "PLAY", menuCard.transform, font,
-                new Vector2(0.5f, 0f), new Vector2(0.5f, 0f), new Vector2(280f, 76f), new Vector2(0f, 56f),
+                new Vector2(0.5f, 0.5f), new Vector2(0.5f, 0.5f), new Vector2(300f, 74f), Vector2.zero,
                 new Color32(34, 186, 145, 255), new Color32(77, 219, 178, 255));
 
             GameObject resultPanel = CreateImagePanel("Result Panel", canvasObject.transform,
