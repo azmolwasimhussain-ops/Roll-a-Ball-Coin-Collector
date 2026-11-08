@@ -17,7 +17,8 @@ Roll around the arena and collect all **12 coins** to win. Static barriers and m
 - HUD with collected and total coins, remaining lives, and a level label.
 - Title screen, win and game-over screens, restart, and main-menu buttons.
 - Optional audio clip references for coin pickup, obstacle impact, and background music. No audio files are bundled.
-- URP lighting, colorful materials, decorative level details, and TextMesh Pro UI.
+- TextMesh Pro UI and URP lighting with soft shadows, ambient occlusion, tone mapping, bloom, and a subtle vignette.
+- Phase 1 visual polish: textured grass, richer metallic finishes, a blue ball trail, coin glow rings, hazard highlights, atmospheric sparkles, decorative orbs, and a procedural skybox.
 
 ## Technologies
 
@@ -58,8 +59,8 @@ Roll-a-Ball-Coin-Collector/
 ├── .gitignore
 └── RollABallCoinCollector/
     ├── Assets/
-    │   ├── Editor/ProjectBootstrap/  # Playable scene generator
-    │   ├── Materials/                # Game materials
+    │   ├── Editor/ProjectBootstrap/  # Scene generator and in-place visual upgrade tool
+    │   ├── Materials/                # Game and glow materials
     │   ├── Scenes/                   # Main game scene and Unity sample scene
     │   ├── Scripts/                  # Camera, coins, game, hazards, and player
     │   ├── Settings/                 # URP and volume settings
@@ -79,6 +80,8 @@ Select **Game Manager** in the Hierarchy and assign `AudioClip` assets to **Coin
 ## Scene generator
 
 The Editor setup script is at `Assets/Editor/ProjectBootstrap/RollABallSceneSetup.cs`. Use **Tools > Roll-a-Ball Coin Collector > Generate Playable Scene** to create the course, player, coins, hazards, camera, lighting, and UI. It preserves an existing `RollABallMain.unity`; move or rename that scene before generating a replacement.
+
+To apply or reapply the Phase 1 art pass to the current playable scene, open `Assets/Scenes/RollABallMain.unity` and choose **Tools > Roll-a-Ball Coin Collector > Apply Phase 1 Visual Upgrade**. The pass creates its grass texture and presentation materials inside `Assets` and reuses existing gameplay objects.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for Unity asset and repository workflow notes.
 
