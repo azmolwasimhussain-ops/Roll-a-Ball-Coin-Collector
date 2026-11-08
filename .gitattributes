@@ -1,0 +1,42 @@
+# Keep Unity text assets consistent across operating systems.
+*.asset text eol=lf
+*.asmdef text eol=lf
+*.cs text eol=lf
+*.controller text eol=lf
+*.inputactions text eol=lf
+*.json text eol=lf
+*.mat text eol=lf
+*.md text eol=lf
+*.meta text eol=lf
+*.prefab text eol=lf
+*.shader text eol=lf
+*.shadergraph text eol=lf
+*.txt text eol=lf
+*.unity text eol=lf
+*.uss text eol=lf
+*.uxml text eol=lf
+
+# Preserve imported media and packaged builds byte-for-byte.
+*.aif binary
+*.aiff binary
+*.blend binary
+*.exr binary
+*.fbx binary
+*.gif binary
+*.hdr binary
+*.jpeg binary
+*.jpg binary
+*.mp3 binary
+*.mp4 binary
+*.mov binary
+*.obj binary
+*.otf binary
+*.png binary
+*.psb binary
+*.psd binary
+*.tif binary
+*.tiff binary
+*.ttf binary
+*.wav binary
+*.zip binary
+*.unitypackage binary
