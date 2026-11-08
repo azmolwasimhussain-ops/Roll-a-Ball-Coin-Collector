@@ -1,0 +1,57 @@
+# Unity-generated data
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+[Cc]aptures/
+ExportedObj/
+
+# IDE-generated files
+.vs/
+.idea/
+.vscode/
+.vscode-test/
+*.csproj
+*.unityproj
+*.sln
+*.slnx
+*.user
+*.userprefs
+*.csproj.user
+*.sln.DotSettings.user
+*.pidb
+*.booproj
+*.svclog
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+*.tmp_proj
+*.swp
+*~
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Local credentials and key material
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.key
+.secrets/
+
+# Build and export artifacts
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.dSYM/
+*.ipa
