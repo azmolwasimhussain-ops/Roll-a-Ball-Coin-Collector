@@ -155,6 +155,8 @@ namespace RollABallCoinCollector.EditorTools
             GameHUD hud = CreateHud(font, gameManager);
             gameManager.Configure(hud, gameAudio);
 
+            VisualUpgradeTool.ApplyToScene(scene);
+
             EditorSceneManager.MarkSceneDirty(scene);
             EditorSceneManager.SaveScene(scene, ScenePath);
             EditorBuildSettings.scenes = new[]
