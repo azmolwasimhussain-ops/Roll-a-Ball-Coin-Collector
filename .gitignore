@@ -49,6 +49,7 @@ Thumbs.db
 .secrets/
 
 # Build and export artifacts
+/RollABallCoinCollector/Packages/manifest [0-9]*.json
 *.apk
 *.aab
 *.unitypackage
